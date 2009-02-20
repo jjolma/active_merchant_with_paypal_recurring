@@ -1,4 +1,8 @@
 .DS_Store
 *.orig
+<<<<<<< HEAD:.gitignore
 test/fixtures.yml
+=======
+test/fixtures
+>>>>>>> ae2c2914333cd33ab3195bce580fff049d86ba5e:.gitignore
 
