@@ -94,27 +94,6 @@ module ActiveMerchant #:nodoc:
         xml.target!
       end
 
-      # def build_setup_request(action, options)
-      #   xml = Builder::XmlMarkup.new :indent => 2
-      #   xml.tag! 'SetExpressCheckoutReq', 'xmlns' => PAYPAL_NAMESPACE do
-      #     xml.tag! 'SetExpressCheckoutRequest', 'xmlns:n2' => EBAY_NAMESPACE do
-      #       xml.tag! 'n2:Version', API_VERSION
-      #       xml.tag! 'n2:SetExpressCheckoutRequestDetails' do
-      #         xml.tag! 'n2:PaymentAction', action
-      #         xml.tag! 'n2:NoShipping', options[:no_shipping] ? '1' : '0'
-      #         xml.tag! 'n2:ReturnURL', options[:return_url]
-      #         xml.tag! 'n2:CancelURL', options[:cancel_return_url]
-      #         xml.tag! 'n2:BillingAgreementDetails' do
-      #           xml.tag! 'n2:BillingType', 'RecurringPayments'
-      #           xml.tag! 'n2:BillingAgreementDescription', options[:description]
-      #         end
-      #       end
-      #     end
-      #   end
-      # 
-      #   xml.target!
-      # end
-
       def build_get_details_request(token)
         xml = Builder::XmlMarkup.new :indent => 2
         xml.tag! 'GetExpressCheckoutDetailsReq', 'xmlns' => PAYPAL_NAMESPACE do
