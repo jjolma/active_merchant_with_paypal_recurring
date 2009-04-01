@@ -104,6 +104,7 @@ module ActiveMerchant #:nodoc:
               xml.tag! 'n2:CancelURL', options[:cancel_return_url]
               xml.tag! 'n2:IPAddress', options[:ip]
               xml.tag! 'n2:OrderDescription', options[:description]
+              xml.tag! 'n2:Custom', options[:custom] unless options[:custom].blank?
               xml.tag! 'n2:BuyerEmail', options[:email] unless options[:email].blank?
               xml.tag! 'n2:InvoiceID', options[:order_id]
         
