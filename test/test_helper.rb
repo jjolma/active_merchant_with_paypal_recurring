@@ -36,6 +36,12 @@ module ActiveMerchant
       end
     end
 
+    def assert_form_field(field, value)
+      clean_backtrace do
+        assert_equal value, @helper.form_fields[field]
+      end
+    end
+
     # Allows the testing of you to check for negative assertions:
     #
     #   # Instead of
