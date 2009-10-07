@@ -32,7 +32,7 @@ module ActiveMerchant
   module Assertions
     def assert_field(field, value)
       clean_backtrace do 
-        assert_equal value, @helper.fields[field]
+        assert_equal value, @helper.form_fields[field]
       end
     end
     
